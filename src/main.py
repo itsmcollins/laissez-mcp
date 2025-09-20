@@ -8,7 +8,7 @@ from eth_account import Account
 from x402.clients.httpx import x402HttpxClient
 from dotenv import load_dotenv
 from web3 import Web3
-from fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP
 
 load_dotenv()
 
@@ -57,7 +57,7 @@ else:
 
 
 
-@mcp.tool
+@mcp.tool()
 async def pay(endpoint: str, description: str, price: float) -> str:
     print(f'Paying {endpoint} {price} for access to:\n{description}')
     

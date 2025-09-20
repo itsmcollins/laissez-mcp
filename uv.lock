@@ -1173,6 +1173,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "eth-account" },
     { name = "fastmcp" },
+    { name = "mcp", extra = ["cli"] },
     { name = "python-dotenv" },
     { name = "web3" },
     { name = "x402" },
@@ -1182,6 +1183,7 @@ dependencies = [
 requires-dist = [
     { name = "eth-account", specifier = ">=0.13.7" },
     { name = "fastmcp", specifier = ">=2.12.3" },
+    { name = "mcp", extras = ["cli"], specifier = ">=1.14.1" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "web3", specifier = ">=7.13.0" },
     { name = "x402", specifier = ">=0.2.1" },
@@ -1322,6 +1324,12 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/48/e9/242096400d702924b49f8d202c6ded7efb8841cacba826b5d2e6183aef7b/mcp-1.14.1.tar.gz", hash = "sha256:31c4406182ba15e8f30a513042719c3f0a38c615e76188ee5a736aaa89e20134", size = 454944, upload-time = "2025-09-18T13:37:19.971Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/11/d334fbb7c2aeddd2e762b86d7a619acffae012643a5738e698f975a2a9e2/mcp-1.14.1-py3-none-any.whl", hash = "sha256:3b7a479e8e5cbf5361bdc1da8bc6d500d795dc3aff44b44077a363a7f7e945a4", size = 163809, upload-time = "2025-09-18T13:37:18.165Z" },
+]
+
+[package.optional-dependencies]
+cli = [
+    { name = "python-dotenv" },
+    { name = "typer" },
 ]
 
 [[package]]
